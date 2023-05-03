@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float speed = 10f; // serialize field not needed for public ?
+    [SerializeField] private float speed = 10f;
+    [SerializeField] private int damage = 1;
     private Transform target;
     private int wayPointIndex = 0;
 
@@ -28,11 +29,18 @@ public class Enemy : MonoBehaviour
     {
         if (wayPointIndex >= Waypoints.waypoints.Length - 1)
         {
-            Destroy(gameObject);
+            FinishReached();
             return;
         }
 
         wayPointIndex++;
         target = Waypoints.waypoints[wayPointIndex];
+    }
+
+    void FinishReached()
+    {
+        Destroy(gameObject);
+        PlayerStats.coreLives -= damage;
+        return;
     }
 }

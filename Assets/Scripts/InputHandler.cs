@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class InputHandler : MonoBehaviour
 {
-    [SerializeField] private float speed = 50f; // serialize field not needed for public ?
-    [SerializeField] private float padding = 10f;
-    private bool windowInFocus = true;
+    [SerializeField] private float speed = 50f;
+   // [SerializeField] private float padding = 10f;
+    [SerializeField] private bool windowInFocus = true;
 
     private Camera cam;
     private float targetZoom;
@@ -50,23 +50,23 @@ public class InputHandler : MonoBehaviour
         targetZoom = Mathf.Clamp(targetZoom, 10, 50);
         cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, targetZoom, ref zoomAxis, Time.deltaTime * zoomLerpSpeed);
 
-        // Camera movement logic
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || Input.mousePosition.y >= Screen.height - padding) // || Input.mousePosition.y >= Screen.height - padding
+        // Camera movement logic                                         Add code for mouse movement later.
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) // || Input.mousePosition.y >= Screen.height - padding
         {
             transform.Translate(Vector2.up * Time.deltaTime * speed, Space.World);
         }
 
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || Input.mousePosition.y <= padding) // || Input.mousePosition.y <= Screen.height - padding
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) // || Input.mousePosition.y <= padding
         {
             transform.Translate(-Vector2.up * Time.deltaTime * speed, Space.World);
         }
 
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.mousePosition.x <= padding) // || Input.mousePosition.x >= Screen.width - padding
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) // || Input.mousePosition.x <= padding
         {
             transform.Translate(Vector2.left * Time.deltaTime * speed, Space.World);
         }
 
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.mousePosition.x >= Screen.width - padding) // || Input.mousePosition.x <= Screen.width - padding
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) // || Input.mousePosition.x >= Screen.width - padding
         {
             transform.Translate(-Vector2.left * Time.deltaTime * speed, Space.World);
         }
