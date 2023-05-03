@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 10f;
+    [SerializeField] private float speed = 10f; // serialize field not needed for public ?
     private Transform target;
     private int wayPointIndex = 0;
 
