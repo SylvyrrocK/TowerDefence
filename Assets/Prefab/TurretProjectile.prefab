@@ -98,3 +98,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 25
+  projectileImpact: {fileID: 5651428999075451381, guid: da7a29713e688ac4a87664440a2f95ee, type: 3}

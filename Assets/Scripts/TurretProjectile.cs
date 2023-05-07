@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretProjectile : MonoBehaviour
 {
     [SerializeField] private float projectileSpeed = 100f;
+    public GameObject projectileImpact;
     private Transform projectileTarget;
 
     public void Chase (Transform target)
@@ -35,6 +36,9 @@ public class TurretProjectile : MonoBehaviour
 
     public void ProjectileCollision()
     {
-        Debug.Log("HIT LANDED");
+        Instantiate(projectileImpact, transform.position, transform.rotation);
+        Destroy(gameObject);
+ 
+        // Debug.Log("HIT LANDED");
     }
 }

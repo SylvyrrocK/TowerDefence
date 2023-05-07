@@ -106,6 +106,6 @@ public class TurretLogic : MonoBehaviour
             projectile.Chase(target);
         }
 
-        Debug.Log("PROJECTILE FIRED");
+        // Debug.Log("PROJECTILE FIRED");
     }
 }
