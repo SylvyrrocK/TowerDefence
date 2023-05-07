@@ -7822,6 +7822,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
   m_PrefabInstance: {fileID: 1987314534}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1155761819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1155761820}
+  m_Layer: 0
+  m_Name: ProjectilePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1155761820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155761819}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1666724627}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1159648830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6907401102020219665, guid: e3dae47c181ad0a45aa4b7c5d079820c, type: 3}
@@ -10192,6 +10223,9 @@ MonoBehaviour:
   enemyTag: Enemy
   range: 10
   turnSpeed: 10
+  reloadTime: 2
+  turretProjectilePrefab: {fileID: 1501907425422146853, guid: c56e0b70d8beb9a4d88c5feddb5ef15f, type: 3}
+  projectilePoint: {fileID: 1155761820}
 --- !u!4 &1463404193 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7096017598924823445, guid: 17019e50bad00ef4f92e8231acf8d977, type: 3}
@@ -15361,7 +15395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7096017598924823445, guid: 17019e50bad00ef4f92e8231acf8d977, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7096017598924823445, guid: 17019e50bad00ef4f92e8231acf8d977, type: 3}
       propertyPath: m_LocalPosition.x

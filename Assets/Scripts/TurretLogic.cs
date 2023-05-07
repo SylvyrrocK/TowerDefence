@@ -11,6 +11,12 @@ public class TurretLogic : MonoBehaviour
     public float range = 10f;
     public float turnSpeed = 10f;
 
+    public float reloadTime = 2f;
+    private float fireTimer = 0f;
+
+    public GameObject turretProjectilePrefab;
+    public Transform projectilePoint;
+
     void Start()
     {
         InvokeRepeating("TargetLock", 0f, 0.5f);
@@ -31,14 +37,21 @@ public class TurretLogic : MonoBehaviour
         Quaternion rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed);
         partToRotate.rotation = rotation;
 
-        // Second option ?
+        // Second option ? DELETE LATER
         //Vector3 dirrection = target.position - transform.position;
         //Quaternion dirrectionToRotate = Quaternion.LookRotation(dirrection);
         //Vector3 targetRotation = dirrectionToRotate.eulerAngles;
         //rotataionPoint.rotation = Quaternion.Euler (0f, targetRotation.y, 0f);
+
+        if (fireTimer <= 0f)
+        {
+            Fire();
+            fireTimer = 2f / reloadTime;
+        }
+        fireTimer = fireTimer - Time.deltaTime;
     }
 
-    // Draw radius of selected tower
+    // Draw radius of selected tower for debug purposes
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.black;
@@ -69,5 +82,30 @@ public class TurretLogic : MonoBehaviour
         {
             target = null;
         }
+    }
+
+    void Fire()
+    {
+        // Create a refference to projectile object
+        GameObject projectileObject = (GameObject)Instantiate(turretProjectilePrefab, projectilePoint.position, projectilePoint.rotation);
+        // Geting projectile script
+        TurretProjectile projectile = projectileObject.GetComponent<TurretProjectile>();
+
+        // DELETE LATER
+        //if (projectile != null)
+        //{
+        //    projectile.Chase(target);
+        //}
+
+        if (projectile == null)
+        {
+            return;
+        }
+        else
+        {
+            projectile.Chase(target);
+        }
+
+        Debug.Log("PROJECTILE FIRED");
     }
 }
