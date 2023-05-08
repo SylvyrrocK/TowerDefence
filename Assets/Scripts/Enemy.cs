@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Enemy Stats:")]
     [SerializeField] private float speed = 10f;
     [SerializeField] private int damage = 1;
     private Transform target;

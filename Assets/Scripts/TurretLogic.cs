@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class TurretLogic : MonoBehaviour
 {
-    public Transform target;
-    public Transform partToRotate;
-
-    public string enemyTag = "Enemy";
+    [Header("Tower Stats:")]
     public float range = 10f;
     public float turnSpeed = 10f;
-
     public float reloadTime = 2f;
+
+    [Header("Unity Stuff (Dont Change):")]
+    public string enemyTag = "Enemy";
     private float fireTimer = 0f;
+
+    public Transform target;
+    public Transform partToRotate;
 
     public GameObject turretProjectilePrefab;
     public Transform projectilePoint;

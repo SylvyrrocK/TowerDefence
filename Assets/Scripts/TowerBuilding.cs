@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class TowerBuilding : MonoBehaviour
 {
+
     public static TowerBuilding instance;
     private GameObject selectedTower;
+
+    [Header ("Tower Prefabs:")]
     public GameObject defaultTowerPrefab;
+    public GameObject minigunTowerPrefab;
+    public GameObject mortarTowerPrefab;
+    public GameObject slowFieldPrefab;
 
     // When script is called we store this tower manager script so we can access it at any point
     private void Awake()
@@ -25,14 +31,13 @@ public class TowerBuilding : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        selectedTower = defaultTowerPrefab;
-    }
+    //void Start()
+    //{
+    //    selectedTower = defaultTowerPrefab;
+    //}
 
-    // Update is called once per frame
-    void Update()
+    public void SetTowerToPlace(GameObject turret)
     {
-        
+        selectedTower = turret;
     }
 }
