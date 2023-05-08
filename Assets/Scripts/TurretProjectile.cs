@@ -36,9 +36,11 @@ public class TurretProjectile : MonoBehaviour
 
     public void ProjectileCollision()
     {
-        Instantiate(projectileImpact, transform.position, transform.rotation);
-        Destroy(gameObject);
- 
+        GameObject hitAfterWave = Instantiate(projectileImpact, transform.position, transform.rotation);
+        Destroy(hitAfterWave, 1.5f); // Projectile animation
+        Destroy(gameObject); // Projectile
+
+        Destroy(projectileTarget.gameObject); // Enemy
         // Debug.Log("HIT LANDED");
     }
 }
