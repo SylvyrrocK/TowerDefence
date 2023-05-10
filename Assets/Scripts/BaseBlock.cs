@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BaseBlock : MonoBehaviour
 {
-    private GameObject isTurret;
+    public  GameObject isTurret;
     //public Material hoverMaterial;
     //[SerializeField] private Material startMaterial;
     private Renderer blockRend;
@@ -28,7 +28,7 @@ public class BaseBlock : MonoBehaviour
         }
 
         // Prevent base block highlight if there is no tower to build selected
-        if (towerBuilding.GetSelectedTower() == null)
+        if (!towerBuilding.AbleToBuild)
         {
             return;
         }
@@ -47,7 +47,7 @@ public class BaseBlock : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (towerBuilding.GetSelectedTower() == null)
+        if (!towerBuilding.AbleToBuild)
         {
             return;
         }
@@ -58,7 +58,11 @@ public class BaseBlock : MonoBehaviour
             return;
         }
 
-        GameObject selectedTurret = towerBuilding.GetSelectedTower();
-        isTurret = (GameObject)Instantiate(selectedTurret, transform.position, transform.rotation);
+        // Call method from Tower Building class for selected node
+        towerBuilding.TowerBuild(this);
+
+        // DELETE
+        //GameObject selectedTurret = towerBuilding.GetSelectedTower();
+        //isTurret = (GameObject)Instantiate(selectedTurret, transform.position, transform.rotation);
     }
 }

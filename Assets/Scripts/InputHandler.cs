@@ -5,7 +5,7 @@ using UnityEngine;
 public class InputHandler : MonoBehaviour
 {
     [SerializeField] private float speed = 50f;
-   // [SerializeField] private float padding = 10f;
+    //[SerializeField] private float padding = 10f;
     [SerializeField] private bool windowInFocus = true;
 
     private Camera cam;

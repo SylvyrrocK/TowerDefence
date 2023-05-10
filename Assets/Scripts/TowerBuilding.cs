@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class TowerBuilding : MonoBehaviour
 {
-
     public static TowerBuilding instance;
-    private GameObject selectedTower;
+    private TowerStats selectedTower;
 
     [Header ("Tower Prefabs:")]
     public GameObject defaultTowerPrefab;
@@ -25,10 +24,8 @@ public class TowerBuilding : MonoBehaviour
         instance = this;
     }
 
-    public GameObject GetSelectedTower()
-    {
-        return selectedTower;
-    }
+    // Property that returns selected tower
+    public bool AbleToBuild { get { return selectedTower != null; } }
 
     // Start is called before the first frame update
     //void Start()
@@ -36,8 +33,22 @@ public class TowerBuilding : MonoBehaviour
     //    selectedTower = defaultTowerPrefab;
     //}
 
-    public void SetTowerToPlace(GameObject turret)
+    public void PickTowerToPlace(TowerStats tower)
     {
-        selectedTower = turret;
+        selectedTower = tower;
+    }
+
+    public void TowerBuild(BaseBlock baseBlock)
+    {
+        if (PlayerStats.money < selectedTower.towerPrice)
+        {
+            Debug.Log("Your money: " + PlayerStats.money + " Tower price: " + selectedTower.towerPrice);
+            return;
+        }
+
+        GameObject tower = (GameObject)Instantiate(selectedTower.prefab, baseBlock.transform.position, baseBlock.transform.rotation);
+        baseBlock.isTurret = tower;
+        PlayerStats.money -= selectedTower.towerPrice;
+        Debug.Log("Tower bought: " + PlayerStats.money);
     }
 }

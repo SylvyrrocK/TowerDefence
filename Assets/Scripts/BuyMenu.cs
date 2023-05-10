@@ -4,29 +4,35 @@ using UnityEngine;
 
 public class BuyMenu : MonoBehaviour
 {
+    public TowerStats defaultTower;
+    public TowerStats minigunTower;
+    public TowerStats mortarTower;
+    public TowerStats slowFieldTower;
+
     TowerBuilding towerBuilding;
-    public void BuyDefaultTurret()
+
+    public void SelectDefaultTower()
     {
-        Debug.Log("Default Turret Bought");
-        towerBuilding.SetTowerToPlace(towerBuilding.defaultTowerPrefab);
+        Debug.Log("Default Tower Picked");
+        towerBuilding.PickTowerToPlace(defaultTower);
     }
 
-    public void BuyMinigunTurret()
+    public void SelectMinigun()
     {
-        Debug.Log("Minigun Turret Bought");
-        towerBuilding.SetTowerToPlace(towerBuilding.minigunTowerPrefab);
+        Debug.Log("Minigun Tower Picked");
+        towerBuilding.PickTowerToPlace(minigunTower);
     }
 
-    public void BuyMortar()
+    public void SelectMortar()
     {
-        Debug.Log("Slow Field Bought");
-        towerBuilding.SetTowerToPlace(towerBuilding.mortarTowerPrefab);
+        Debug.Log("Mortar Tower Picked");
+        towerBuilding.PickTowerToPlace(mortarTower);
     }
 
-    public void BuySlowField()
+    public void SelectSlowField()
     {
-        Debug.Log("Slow Field Bought");
-        towerBuilding.SetTowerToPlace(towerBuilding.slowFieldPrefab);
+        Debug.Log("Slow Field Picked");
+        towerBuilding.PickTowerToPlace(slowFieldTower);
     }
 
     private void Start()
