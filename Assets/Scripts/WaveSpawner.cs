@@ -17,25 +17,25 @@ public class WaveSpawner : MonoBehaviour
 
     [SerializeField] private float waveTimer = 5f;
     [SerializeField] private int waveNumber = 0;
-    private float countdown = 5f;
+    private float timer = 5f;
 
     void Update()
     {
-      if (countdown <= 0f)
+      if (timer <= 0f)
         {
             StartCoroutine(WaveSpawn());
-            countdown = waveTimer;
+            timer = waveTimer;
             waveTimer += 1f;
         }
 
-        waveTimerText.text = "Next: " + Mathf.Ceil(countdown).ToString();
-        countdown -= Time.deltaTime;
+        waveTimerText.text = "Next:" + Mathf.Ceil(timer).ToString();
+        timer -= Time.deltaTime; // TODO: format timer so it runs more smooth
     }
 
     IEnumerator WaveSpawn()
     {
         waveNumber++;
-        waveNumberText.text = "Wave: " + waveNumber.ToString();
+        waveNumberText.text = "Wave:" + waveNumber.ToString();
         if (waveNumber <= 4)
         {
             for (int i = 0; i < waveNumber; i++)

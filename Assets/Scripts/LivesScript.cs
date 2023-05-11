@@ -11,6 +11,6 @@ public class LivesScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coreLivesText.text = "Lives: " + PlayerStats.coreLives.ToString();
+        coreLivesText.text = "HP:" + PlayerStats.coreLives.ToString();
     }
 }

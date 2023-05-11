@@ -33,14 +33,32 @@ public class BaseBlock : MonoBehaviour
             return;
         }
 
+        if (towerBuilding.EnoughMoney && isTurret == null)
+        {
+            // Set green colour
+            blockRend.material.color = new Color(0, 1, 0, 1);
+        }
+
+        if (!towerBuilding.EnoughMoney || isTurret != null)
+        {
+            // Set red colour
+            blockRend.material.color = new Color(1, 0, 0, 1);
+        }
+        //else
+        //{
+        //    // Set red colour
+        //    blockRend.material.color = new Color(1, 0, 0, 1);
+        //}
+
+        // DELETE LATER
         // Set cyan color on hover
-        blockRend.material.color = new Color(0,1,1,1);
+        //blockRend.material.color = new Color(0,1,1,1);
         //blockRend.material = hoverMaterial;
     }
 
     void OnMouseExit()
     {
-        // Set color white color on exit
+        // Set white colour on exit
         blockRend.material.color = new Color(1,1,1,1);
         //blockRend.material = startMaterial;
     }
@@ -60,9 +78,6 @@ public class BaseBlock : MonoBehaviour
 
         // Call method from Tower Building class for selected node
         towerBuilding.TowerBuild(this);
-
-        // DELETE
-        //GameObject selectedTurret = towerBuilding.GetSelectedTower();
-        //isTurret = (GameObject)Instantiate(selectedTurret, transform.position, transform.rotation);
+        blockRend.material.color = new Color(1, 1, 1, 1); // White
     }
 }

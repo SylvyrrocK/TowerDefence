@@ -6,12 +6,14 @@ public class TowerBuilding : MonoBehaviour
 {
     public static TowerBuilding instance;
     private TowerStats selectedTower;
+    public GameObject constructionEffect;
 
     [Header ("Tower Prefabs:")]
     public GameObject defaultTowerPrefab;
     public GameObject minigunTowerPrefab;
     public GameObject mortarTowerPrefab;
     public GameObject slowFieldPrefab;
+    //PriceCheck priceCheck;
 
     // When script is called we store this tower manager script so we can access it at any point
     private void Awake()
@@ -24,14 +26,12 @@ public class TowerBuilding : MonoBehaviour
         instance = this;
     }
 
+    //public bool FreeBlock { get { return BaseBlock.isTurret == null;} }
+
+    // Propert that check if we have enough money to build selected tower
+    public bool EnoughMoney { get { return PlayerStats.money >= selectedTower.towerPrice; } }
     // Property that returns selected tower
     public bool AbleToBuild { get { return selectedTower != null; } }
-
-    // Start is called before the first frame update
-    //void Start()
-    //{
-    //    selectedTower = defaultTowerPrefab;
-    //}
 
     public void PickTowerToPlace(TowerStats tower)
     {
@@ -46,7 +46,10 @@ public class TowerBuilding : MonoBehaviour
             return;
         }
 
+        // TODO: create completion check
         GameObject tower = (GameObject)Instantiate(selectedTower.prefab, baseBlock.transform.position, baseBlock.transform.rotation);
+        GameObject construction = (GameObject)Instantiate(constructionEffect, baseBlock.transform.position, baseBlock.transform.rotation);
+        Destroy(construction, 4f);
         baseBlock.isTurret = tower;
         PlayerStats.money -= selectedTower.towerPrice;
         Debug.Log("Tower bought: " + PlayerStats.money);

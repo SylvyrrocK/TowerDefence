@@ -8,13 +8,24 @@ public class BuyMenu : MonoBehaviour
     public TowerStats minigunTower;
     public TowerStats mortarTower;
     public TowerStats slowFieldTower;
-
+    //private bool completed = false;
     TowerBuilding towerBuilding;
 
     public void SelectDefaultTower()
     {
         Debug.Log("Default Tower Picked");
         towerBuilding.PickTowerToPlace(defaultTower);
+
+        //if (!completed)
+        //{
+        //    Debug.Log("Default Tower Picked");
+        //    towerBuilding.PickTowerToPlace(defaultTower);
+        //    completed = true;
+        //}
+        //if (completed)
+        //{
+        //    return;
+        //}
     }
 
     public void SelectMinigun()
