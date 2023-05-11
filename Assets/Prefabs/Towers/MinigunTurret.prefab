@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 3348059401887315626}
   - component: {fileID: 3348059401887315605}
   m_Layer: 0
-  m_Name: MinnigunTurret
+  m_Name: MinigunTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,11 +83,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 10
   turnSpeed: 10
-  reloadTime: 4
+  fireRate: 4
   enemyTag: Enemy
   target: {fileID: 0}
   partToRotate: {fileID: 3762492705641469879}
-  turretProjectilePrefab: {fileID: 1501907425422146853, guid: c56e0b70d8beb9a4d88c5feddb5ef15f, type: 3}
+  turretProjectilePrefab: {fileID: 1501907425422146853, guid: 569f2dc35bdb2d143861aede032ed915, type: 3}
   projectilePoint: {fileID: 3348059402211702441}
 --- !u!1 &3348059402211702446
 GameObject:

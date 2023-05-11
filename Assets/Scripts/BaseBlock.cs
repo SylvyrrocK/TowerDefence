@@ -44,6 +44,8 @@ public class BaseBlock : MonoBehaviour
             // Set red colour
             blockRend.material.color = new Color(1, 0, 0, 1);
         }
+        
+        // TODO: red hover if place already taken
         //else
         //{
         //    // Set red colour

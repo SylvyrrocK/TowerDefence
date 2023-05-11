@@ -8,7 +8,6 @@ public class PriceCheck : MonoBehaviour
 {
     // Start is called before the first frame update
     TowerStats towerStats;
-
     
     public void NotEnoughMoney()
     {

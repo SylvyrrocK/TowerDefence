@@ -7,7 +7,7 @@ public class TurretLogic : MonoBehaviour
     [Header("Tower Stats:")]
     public float range = 10f;
     public float turnSpeed = 10f;
-    public float reloadTime = 2f;
+    public float fireRate = 2f;
 
     [Header("Unity Stuff (Dont Change):")]
     public string enemyTag = "Enemy";
@@ -48,7 +48,7 @@ public class TurretLogic : MonoBehaviour
         if (fireTimer <= 0f)
         {
             Fire();
-            fireTimer = 2f / reloadTime;
+            fireTimer = 2f / fireRate;
         }
         fireTimer = fireTimer - Time.deltaTime;
     }

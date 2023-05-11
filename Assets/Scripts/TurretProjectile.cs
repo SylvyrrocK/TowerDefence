@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class TurretProjectile : MonoBehaviour
 {
+    [Header ("Projectile Stats")]
     [SerializeField] private float projectileSpeed = 100f;
+    [SerializeField] private float impactRadius = 0f;
+    [SerializeField] private int damage = 10;
+
+    [Header ("Unity Stuff")]
     public GameObject projectileImpact;
     private Transform projectileTarget;
 
@@ -18,7 +23,15 @@ public class TurretProjectile : MonoBehaviour
     {
         if (projectileTarget == null)
         {
-            Destroy(gameObject);
+            if (impactRadius > 0)
+            {
+                Explode();
+                Destroy(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
             return;
         }
 
@@ -38,9 +51,54 @@ public class TurretProjectile : MonoBehaviour
     {
         GameObject hitAfterWave = Instantiate(projectileImpact, transform.position, transform.rotation);
         Destroy(hitAfterWave, 1.5f); // Projectile animation
+
+        if (impactRadius > 0)
+        {
+            Explode();
+        }
+        else
+        {
+            Damage(projectileTarget);
+        }
+
         Destroy(gameObject); // Projectile
 
-        Destroy(projectileTarget.gameObject); // Enemy
-        // Debug.Log("HIT LANDED");
+        // DELETE LATER
+        //Destroy(projectileTarget.gameObject); // Enemy
+        //Debug.Log("HIT LANDED");
+    }
+
+    void Damage(Transform projectileTarget)
+    {
+        Enemy enemy = projectileTarget.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            enemy.damageCalculation(damage);
+            return;
+        }
+        else
+        {
+            return;
+        }
+
+        //Destroy(projectileTarget.gameObject); // Enemy
+    }
+
+    void Explode()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, impactRadius);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Enemy"))
+            {
+                Damage(collider.transform);
+            }
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, impactRadius);
     }
 }

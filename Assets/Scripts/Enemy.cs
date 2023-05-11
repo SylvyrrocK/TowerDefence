@@ -6,9 +6,13 @@ public class Enemy : MonoBehaviour
 {
     [Header("Enemy Stats:")]
     [SerializeField] private float speed = 10f;
-    [SerializeField] private int damage = 1;
+    [SerializeField] private int damageToCore = 1;
+    [SerializeField] private int health = 50;
+    [SerializeField] private int bounty = 10;
     private Transform target;
     private int wayPointIndex = 0;
+
+    public GameObject deathAnimation;
 
     void Start()
     {
@@ -26,6 +30,30 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void damageCalculation(int damage)
+    {
+        health -= damage;
+        HealthBar();
+        if (health <= 0)
+        {
+            Death();
+        }
+    }
+
+    void HealthBar()
+    {
+        return;
+    }
+
+    void Death()
+    {
+        GameObject effect = (GameObject)Instantiate(deathAnimation, transform.position, transform.rotation);
+        Destroy(effect, 2f);
+
+        Destroy(gameObject);
+        PlayerStats.money += bounty;
+    }
+
     void GetNextWaypoint()
     {
         if (wayPointIndex >= Waypoints.waypoints.Length - 1)
@@ -41,7 +69,7 @@ public class Enemy : MonoBehaviour
     void FinishReached()
     {
         Destroy(gameObject);
-        PlayerStats.coreLives -= damage;
+        PlayerStats.coreLives -= damageToCore;
         return;
     }
 }

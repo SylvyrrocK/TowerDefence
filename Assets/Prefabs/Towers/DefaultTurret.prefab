@@ -79,13 +79,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711590791c54bd64f8c27f9387bbf774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 30
+  range: 15
   turnSpeed: 10
-  reloadTime: 1
+  fireRate: 2
   enemyTag: Enemy
   target: {fileID: 0}
   partToRotate: {fileID: 3762492705641469879}
-  turretProjectilePrefab: {fileID: 1501907425422146853, guid: c56e0b70d8beb9a4d88c5feddb5ef15f, type: 3}
+  turretProjectilePrefab: {fileID: 1501907425422146853, guid: 569f2dc35bdb2d143861aede032ed915, type: 3}
   projectilePoint: {fileID: 3348059402211702441}
 --- !u!1 &3348059402211702446
 GameObject:

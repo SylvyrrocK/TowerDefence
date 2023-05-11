@@ -29,7 +29,7 @@ public class WaveSpawner : MonoBehaviour
         }
 
         waveTimerText.text = "Next:" + Mathf.Ceil(timer).ToString();
-        timer -= Time.deltaTime; // TODO: format timer so it runs more smooth
+        timer -= Time.deltaTime; // TODO: format timer so it runs smooth
     }
 
     IEnumerator WaveSpawn()
