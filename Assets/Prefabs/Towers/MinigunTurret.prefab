@@ -87,7 +87,7 @@ MonoBehaviour:
   enemyTag: Enemy
   target: {fileID: 0}
   partToRotate: {fileID: 3762492705641469879}
-  turretProjectilePrefab: {fileID: 1501907425422146853, guid: 569f2dc35bdb2d143861aede032ed915, type: 3}
+  turretProjectilePrefab: {fileID: 1501907425422146853, guid: 7385da2d00bb3d2489c35b8e660a523a, type: 3}
   projectilePoint: {fileID: 3348059402211702441}
 --- !u!1 &3348059402211702446
 GameObject:

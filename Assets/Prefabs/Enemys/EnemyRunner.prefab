@@ -101,7 +101,8 @@ MonoBehaviour:
   speed: 20
   damageToCore: 1
   health: 10
-  bounty: 10
+  bounty: 15
+  value: 15
   deathAnimation: {fileID: 5651428999075451381, guid: c98435e1c0f41db46a9518ae666b70d4, type: 3}
 --- !u!61 &-7470478054405050832
 BoxCollider2D:

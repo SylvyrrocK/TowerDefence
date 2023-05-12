@@ -6,13 +6,13 @@ public class TowerBuilding : MonoBehaviour
 {
     public static TowerBuilding instance;
     private TowerStats selectedTower;
-    public GameObject constructionEffect;
 
     [Header ("Tower Prefabs:")]
     public GameObject defaultTowerPrefab;
     public GameObject minigunTowerPrefab;
     public GameObject mortarTowerPrefab;
     public GameObject slowFieldPrefab;
+    public GameObject constructionEffect;
     //PriceCheck priceCheck;
 
     // When script is called we store this tower manager script so we can access it at any point

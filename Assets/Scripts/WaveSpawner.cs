@@ -35,6 +35,8 @@ public class WaveSpawner : MonoBehaviour
     IEnumerator WaveSpawn()
     {
         waveNumber++;
+        PlayerStats.waves++;
+
         waveNumberText.text = "Wave:" + waveNumber.ToString();
         if (waveNumber <= 4)
         {

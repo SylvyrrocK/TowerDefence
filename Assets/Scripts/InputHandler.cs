@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class InputHandler : MonoBehaviour
 {
+    [Header("Screen movement:")]
     [SerializeField] private float speed = 50f;
     //[SerializeField] private float padding = 10f;
     [SerializeField] private bool windowInFocus = true;
 
-    private Camera cam;
-    private float targetZoom;
+    [Header("Zoom controls:")]
     [SerializeField] private float zoomFactor = 50f;
     [SerializeField] private float zoomLerpSpeed = 10f;
- 
+    private float targetZoom;
+    private Camera cam; 
+
     private void Start()
     {
         cam = Camera.main;
@@ -21,6 +23,12 @@ public class InputHandler : MonoBehaviour
 
     void Update()
     {
+        if (GameContoller.gameOver)
+        {
+            enabled = false;
+            return;
+        }
+
         // Refactor or remove later (Constraining inputs when coursore is out of bound)
         //Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
         //if (!screenRect.Contains(Input.mousePosition))
@@ -36,12 +44,6 @@ public class InputHandler : MonoBehaviour
         if (!windowInFocus)
         {
             return;
-        }
-
-        // Pause menu
-        if (Input.GetKey(KeyCode.P))
-        {
-            // TODO: Pause 
         }
 
         // Zoom logic

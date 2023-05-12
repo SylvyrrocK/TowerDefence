@@ -166,11 +166,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 10
   turnSpeed: 10
-  reloadTime: 2
+  fireRate: 2
   enemyTag: Enemy
   target: {fileID: 0}
   partToRotate: {fileID: 3762492705641469879}
-  turretProjectilePrefab: {fileID: 1501907425422146853, guid: 569f2dc35bdb2d143861aede032ed915, type: 3}
+  turretProjectilePrefab: {fileID: 1501907425422146853, guid: d1397f3674e591d428282089a0b5cbd0, type: 3}
   projectilePoint: {fileID: 3348059402211702441}
 --- !u!1 &3348059402211702446
 GameObject:

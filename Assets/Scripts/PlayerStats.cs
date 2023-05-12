@@ -13,22 +13,26 @@ public class PlayerStats : MonoBehaviour
     public static int coreLives;
     public int lives = 50;
 
-    TowerStats towerStats;
-    PriceCheck priceCheck;
+    public static int waves;
+    public static int score;
 
     // Start is called before the first frame update
     void Start()
     {
         money = startMoney;
         coreLives = lives;
+        waves = 0;
+        score = 0;
     }
 
     [Header ("UI Text")]
     public TextMeshProUGUI moneyTMP;
+    public TextMeshProUGUI scoreTMP;
 
     void Update()
     {
         moneyTMP.text = "$:" + PlayerStats.money.ToString();
+        scoreTMP.text = "Score:" + PlayerStats.score.ToString();
 
         // TODO: When not enough money change price colour to red
         //if (towerStats.towerPrice != null && money < towerStats.towerPrice)

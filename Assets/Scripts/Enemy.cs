@@ -5,13 +5,14 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header("Enemy Stats:")]
-    [SerializeField] private float speed = 10f;
+    [SerializeField] public float speed = 10f;
     [SerializeField] private int damageToCore = 1;
     [SerializeField] private int health = 50;
     [SerializeField] private int bounty = 10;
+    [SerializeField] private int value = 10;
+
     private Transform target;
     private int wayPointIndex = 0;
-
     public GameObject deathAnimation;
 
     void Start()
@@ -22,7 +23,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Vector2 dirrection = target.position - transform.position;
-        transform.Translate(dirrection.normalized * speed * Time.deltaTime, Space.World);
+        transform.Translate(dirrection.normalized * speed * Time.deltaTime, Space.World); // 
 
         if (Vector2.Distance(transform.position, target.position) <=0.5f )
         {
@@ -49,8 +50,8 @@ public class Enemy : MonoBehaviour
     {
         GameObject effect = (GameObject)Instantiate(deathAnimation, transform.position, transform.rotation);
         Destroy(effect, 2f);
-
         Destroy(gameObject);
+        PlayerStats.score += value;
         PlayerStats.money += bounty;
     }
 
@@ -65,6 +66,11 @@ public class Enemy : MonoBehaviour
         wayPointIndex++;
         target = Waypoints.waypoints[wayPointIndex];
     }
+
+    //public void Slow (float ratio)
+    //{
+    //    speed = startSpeed * (1f - ratio);
+    //}
 
     void FinishReached()
     {

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class TurretProjectile : MonoBehaviour
 {
-    [Header ("Projectile Stats")]
+    [Header ("Projectile Stats:")]
     [SerializeField] private float projectileSpeed = 100f;
     [SerializeField] private float impactRadius = 0f;
     [SerializeField] private int damage = 10;
 
-    [Header ("Unity Stuff")]
+    [Header ("Unity Stuff:")]
     public GameObject projectileImpact;
     private Transform projectileTarget;
 
@@ -80,7 +80,6 @@ public class TurretProjectile : MonoBehaviour
         {
             return;
         }
-
         //Destroy(projectileTarget.gameObject); // Enemy
     }
 
