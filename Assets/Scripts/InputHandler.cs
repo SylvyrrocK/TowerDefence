@@ -7,7 +7,7 @@ public class InputHandler : MonoBehaviour
     [Header("Screen movement:")]
     [SerializeField] private float speed = 50f;
     //[SerializeField] private float padding = 10f;
-    [SerializeField] private bool windowInFocus = true;
+    //[SerializeField] private bool windowInFocus = true;
 
     [Header("Zoom controls:")]
     [SerializeField] private float zoomFactor = 50f;
@@ -35,16 +35,16 @@ public class InputHandler : MonoBehaviour
         //    return;
         
         // Escape menu
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            windowInFocus = !windowInFocus;
-            // TODO: Escape menu
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    windowInFocus = !windowInFocus;
+        //    // TODO: Escape menu
+        //}
 
-        if (!windowInFocus)
-        {
-            return;
-        }
+        //if (!windowInFocus)
+        //{
+        //    return;
+        //}
 
         // Zoom logic
         float zoomAxis = Input.GetAxis("Mouse ScrollWheel");

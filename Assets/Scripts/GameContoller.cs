@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameContoller : MonoBehaviour
@@ -33,7 +34,7 @@ public class GameContoller : MonoBehaviour
         }
 
         // Move it to InputHandler
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Pause))
         {
             if (!gameIsPaused)
             {
@@ -65,8 +66,8 @@ public class GameContoller : MonoBehaviour
 
     public void ResumeGame()
     {
-        Time.timeScale = 1;
         pauseUI.SetActive(false);
+        Time.timeScale = 1;
     }
 
     void EndGame ()
