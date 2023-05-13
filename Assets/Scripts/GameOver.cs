@@ -24,6 +24,7 @@ public class GameOver : MonoBehaviour
 
     public void Exit()
     {
-        Debug.Log("Exit to menu");
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
     }
 }

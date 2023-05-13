@@ -7595,7 +7595,7 @@ Animator:
   m_GameObject: {fileID: 929582270}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 221ffb5495c9ff94a9479826ca559edb, type: 2}
+  m_Controller: {fileID: 9100000, guid: fda3e54522e5aa04091cb7c8065b5718, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 2
   m_ApplyRootMotion: 0
@@ -10911,7 +10911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1315825384}
   m_Layer: 0
-  m_Name: Level 1
+  m_Name: LevelLayout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
