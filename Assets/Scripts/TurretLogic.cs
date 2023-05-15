@@ -32,18 +32,12 @@ public class TurretLogic : MonoBehaviour
             return;
         }
 
-        // Calculation for rotation point in unity units
+        // Calculation for rotation point
         Vector3 dir = target.position - transform.position;
         Vector3 rotatedVectorDir = Quaternion.Euler(0, 0, 0) * dir;
         Quaternion lookRotation = Quaternion.LookRotation(forward: Vector3.forward, upwards: rotatedVectorDir);
         Quaternion rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed);
         partToRotate.rotation = rotation;
-
-        // Second option ? DELETE LATER
-        //Vector3 dirrection = target.position - transform.position;
-        //Quaternion dirrectionToRotate = Quaternion.LookRotation(dirrection);
-        //Vector3 targetRotation = dirrectionToRotate.eulerAngles;
-        //rotataionPoint.rotation = Quaternion.Euler (0f, targetRotation.y, 0f);
 
         if (fireTimer <= 0f)
         {
@@ -92,12 +86,6 @@ public class TurretLogic : MonoBehaviour
         GameObject projectileObject = (GameObject)Instantiate(turretProjectilePrefab, projectilePoint.position, projectilePoint.rotation);
         // Geting projectile script
         TurretProjectile projectile = projectileObject.GetComponent<TurretProjectile>();
-
-        // DELETE LATER
-        //if (projectile != null)
-        //{
-        //    projectile.Chase(target);
-        //}
 
         if (projectile == null)
         {

@@ -124,5 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85df78f018244174984ad3e4a806a752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverMaterial: {fileID: 2100000, guid: 02259b585add8c64497f6a32157430a1, type: 2}
-  startMaterial: {fileID: 0}
+  isTurret: {fileID: 0}

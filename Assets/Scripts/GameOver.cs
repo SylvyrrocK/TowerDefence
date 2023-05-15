@@ -7,6 +7,7 @@ using TMPro;
 
 public class GameOver : MonoBehaviour
 {
+    [Header ("UI Text:")]
     public TextMeshProUGUI wavesText;
     public TextMeshProUGUI scoreText;
 

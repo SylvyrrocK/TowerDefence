@@ -63,8 +63,6 @@ public class TurretProjectile : MonoBehaviour
 
         Destroy(gameObject); // Projectile
 
-        // DELETE LATER
-        //Destroy(projectileTarget.gameObject); // Enemy
         //Debug.Log("HIT LANDED");
     }
 

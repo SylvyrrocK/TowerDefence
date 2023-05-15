@@ -33,7 +33,7 @@ public class GameContoller : MonoBehaviour
             EndGame();
         }
 
-        // Move it to InputHandler
+        // TODO: Move it to InputHandler
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Pause))
         {
             if (!gameIsPaused)

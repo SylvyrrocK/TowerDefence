@@ -5,16 +5,9 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    public string pickedLevel;
-
-    public void Start()
-    {
-        pickedLevel = "FirstLevel";
-    }
-
     public void Play()
     {
-        SceneManager.LoadScene(pickedLevel);
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void Options()
@@ -27,5 +20,4 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Exit");
         Application.Quit();
     }
-
 }

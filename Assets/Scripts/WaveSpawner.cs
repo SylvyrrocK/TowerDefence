@@ -15,7 +15,7 @@ public class WaveSpawner : MonoBehaviour
     public TextMeshProUGUI waveTimerText;
     public TextMeshProUGUI waveNumberText;
 
-    [SerializeField] private float waveTimer = 5f;
+    [SerializeField] private float waveTimer = 8f;
     [SerializeField] private int waveNumber = 0;
     private float timer = 5f;
 

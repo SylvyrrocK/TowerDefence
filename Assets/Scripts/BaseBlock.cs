@@ -6,19 +6,16 @@ using UnityEngine;
 public class BaseBlock : MonoBehaviour
 {
     public  GameObject isTurret;
-    //public Material hoverMaterial;
-    //[SerializeField] private Material startMaterial;
     private Renderer blockRend;
+
     TowerBuilding towerBuilding;
 
     private void Start()
     {
         blockRend = GetComponent<Renderer>();
         towerBuilding = TowerBuilding.instance;
-        //startMaterial = blockRend.material;
     }
 
-    // Called once when entering mouse entering BaseBlock object, maybe better to use OnMouseOver ?
     void OnMouseEnter()
     {
         // Prevent block hover animation when mouse is over UI element
@@ -44,25 +41,12 @@ public class BaseBlock : MonoBehaviour
             // Set red colour
             blockRend.material.color = new Color(1, 0, 0, 1);
         }
-        
-        // TODO: red hover if place already taken
-        //else
-        //{
-        //    // Set red colour
-        //    blockRend.material.color = new Color(1, 0, 0, 1);
-        //}
-
-        // DELETE LATER
-        // Set cyan color on hover
-        //blockRend.material.color = new Color(0,1,1,1);
-        //blockRend.material = hoverMaterial;
     }
 
     void OnMouseExit()
     {
         // Set white colour on exit
         blockRend.material.color = new Color(1,1,1,1);
-        //blockRend.material = startMaterial;
     }
 
     void OnMouseDown()

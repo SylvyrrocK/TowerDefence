@@ -6,7 +6,7 @@ using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
-    [Header("Player starting stats")]
+    [Header("Player starting stats:")]
     public static int money;
     public int startMoney = 800;
 
@@ -25,7 +25,7 @@ public class PlayerStats : MonoBehaviour
         score = 0;
     }
 
-    [Header ("UI Text")]
+    [Header ("UI Text:")]
     public TextMeshProUGUI moneyTMP;
     public TextMeshProUGUI scoreTMP;
 
@@ -33,16 +33,5 @@ public class PlayerStats : MonoBehaviour
     {
         moneyTMP.text = "$:" + PlayerStats.money.ToString();
         scoreTMP.text = "Score:" + PlayerStats.score.ToString();
-
-        // TODO: When not enough money change price colour to red
-        //if (towerStats.towerPrice != null && money < towerStats.towerPrice)
-        //{
-        //    priceCheck.NotEnoughMone2y();
-        //}
-        //else
-        //{
-        //    priceCheck.EnoughMoney();
-        //}
-
     }
 }
