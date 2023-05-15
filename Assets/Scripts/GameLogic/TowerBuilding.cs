@@ -13,7 +13,6 @@ public class TowerBuilding : MonoBehaviour
     public GameObject mortarTowerPrefab;
     public GameObject slowFieldPrefab;
     public GameObject constructionEffect;
-    //PriceCheck priceCheck;
 
     // When script is called we store this tower manager script so we can access it at any point
     private void Awake()
@@ -25,8 +24,6 @@ public class TowerBuilding : MonoBehaviour
         }
         instance = this;
     }
-
-    //public bool FreeBlock { get { return BaseBlock.isTurret == null;} }
 
     // Propert that check if we have enough money to build selected tower
     public bool EnoughMoney { get { return PlayerStats.money >= selectedTower.towerPrice; } }
