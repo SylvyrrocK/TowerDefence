@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.5644531}
+  m_AnchoredPosition: {x: 0, y: 0.6}
   m_SizeDelta: {x: 100, y: 21.9602}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1252240044750076837
@@ -203,7 +203,7 @@ MonoBehaviour:
   speed: 3
   damageToCore: 3
   bounty: 50
-  value: 50
+  scoreValue: 10
   startHealth: 150
   deathAnimation: {fileID: 5651428999075451381, guid: c98435e1c0f41db46a9518ae666b70d4, type: 3}
   enemyHealthBar: {fileID: 6817328481065329180}

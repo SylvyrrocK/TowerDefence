@@ -3730,8 +3730,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
+  padding: 10
   zoomFactor: 50
   zoomLerpSpeed: 10
+  leftLimit: -50
+  rightLimit: 130
+  topLimit: 135
+  bottomLimit: -60
 --- !u!1001 &535473063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5382,6 +5387,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 52100348}
     m_Modifications:
+    - target: {fileID: 2186654843544305934, guid: 72c606e898498cd41b45a830250e50c4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1594280788}
+    - target: {fileID: 2186654843544305934, guid: 72c606e898498cd41b45a830250e50c4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
     - target: {fileID: 2186654843970629042, guid: 72c606e898498cd41b45a830250e50c4, type: 3}
       propertyPath: m_Name
       value: Pause
@@ -5469,6 +5482,14 @@ PrefabInstance:
     - target: {fileID: 2186654843970629043, guid: 72c606e898498cd41b45a830250e50c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186654844714091907, guid: 72c606e898498cd41b45a830250e50c4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1594280788}
+    - target: {fileID: 2186654844714091907, guid: 72c606e898498cd41b45a830250e50c4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Exit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72c606e898498cd41b45a830250e50c4, type: 3}
@@ -10871,6 +10892,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d74f1a12e5752e4f8abd8925b1b97b2, type: 3}
+--- !u!114 &1594280788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 979844561050282137, guid: 3d74f1a12e5752e4f8abd8925b1b97b2, type: 3}
+  m_PrefabInstance: {fileID: 1594280787}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270862543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a12f86508a9c974592589580b36f48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1596160761
 PrefabInstance:
   m_ObjectHideFlags: 0
