@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void damageCalculation(int damage)
+    public void DamageCalculation(int damage)
     {
         health -= damage;
         enemyHealthBar.fillAmount = health / startHealth;
@@ -45,11 +45,6 @@ public class Enemy : MonoBehaviour
         {
             Death();
         }
-    }
-
-    void HealthBar()
-    {
-        return;
     }
 
     void Death()

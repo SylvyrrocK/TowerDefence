@@ -20,6 +20,24 @@ public class GameContoller : MonoBehaviour
         gameIsPaused = false;
     }
 
+
+    enum Speed
+    {
+        first = 1,
+        second = 2,
+        third = 4
+    }
+
+    Dictionary<int, float> dict = new Dictionary<int, float>()
+    {
+    {1, 0.5f},
+    {2, 1},
+    {3, 2}
+    };
+
+
+    int counter {get; set;} = 0;
+
     // Update is called once per frame
     void Update()
     {
@@ -68,6 +86,26 @@ public class GameContoller : MonoBehaviour
     {
         pauseUI.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void changeTimeScale()
+    {
+            if (Time.timeScale == 1.0f)
+        {
+            Time.timeScale = 2f;
+            Debug.Log("2");
+        }
+            else if (Time.timeScale == 2f)
+        {
+            Time.timeScale = 0.5f;
+            Debug.Log("0.5");
+        }
+        else 
+        {
+            Time.timeScale = 1f;
+            Debug.Log("1");
+        }
+  
     }
 
     void EndGame ()

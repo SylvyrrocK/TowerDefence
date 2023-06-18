@@ -71,7 +71,7 @@ public class TurretProjectile : MonoBehaviour
         Enemy enemy = projectileTarget.GetComponent<Enemy>();
         if (enemy != null)
         {
-            enemy.damageCalculation(damage);
+            enemy.DamageCalculation(damage);
             return;
         }
         else

@@ -77,8 +77,8 @@ public class InputHandler : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(new Vector2(leftLimit, topLimit), new Vector2(rightLimit, topLimit));
-        Gizmos.DrawLine(new Vector2(rightLimit, topLimit), new Vector2(rightLimit, topLimit));
+        Gizmos.DrawLine(new Vector2(rightLimit, topLimit), new Vector2(rightLimit, bottomLimit));
         Gizmos.DrawLine(new Vector2(rightLimit, bottomLimit), new Vector2(leftLimit, bottomLimit));
-        Gizmos.DrawLine(new Vector2(leftLimit, bottomLimit), new Vector2(rightLimit, topLimit));
+        Gizmos.DrawLine(new Vector2(leftLimit, bottomLimit), new Vector2(leftLimit, topLimit));
     }
 }

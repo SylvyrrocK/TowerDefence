@@ -255,8 +255,8 @@ MonoBehaviour:
   speed: 10
   damageToCore: 1
   bounty: 10
-  value: 10
-  startHealth: 50
+  scoreValue: 10
+  startHealth: 30
   deathAnimation: {fileID: 5651428999075451381, guid: c98435e1c0f41db46a9518ae666b70d4, type: 3}
   enemyHealthBar: {fileID: 343101482596426622}
 --- !u!61 &-4413220532756497819

@@ -11047,6 +11047,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 52100348}
     m_Modifications:
+    - target: {fileID: 6954548306645222424, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1704081116}
+    - target: {fileID: 6954548306645222424, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SkipWave
+      objectReference: {fileID: 0}
+    - target: {fileID: 6954548306645222424, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WaveSpawner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6954548306645222424, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7276293575650572570, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11094,6 +11110,10 @@ PrefabInstance:
     - target: {fileID: 7276293576446828424, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002065986832, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -930.8805
       objectReference: {fileID: 0}
     - target: {fileID: 7630788003027201604, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_Name
@@ -11198,6 +11218,14 @@ PrefabInstance:
     - target: {fileID: 7630788003048421865, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788003623083785, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -907.8131
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788003623083785, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -905.81323
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}

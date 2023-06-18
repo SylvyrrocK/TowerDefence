@@ -48,7 +48,8 @@ public class WaveSpawner : MonoBehaviour
                 yield return new WaitForSeconds(0.5f);
             }
         }
-        if (waveNumber >= 4 && waveNumber <= 10)
+
+        if (waveNumber > 4 && waveNumber <= 10) // 
         {
             for (int i = 0; i < waveNumber; i++)
             {
@@ -58,6 +59,7 @@ public class WaveSpawner : MonoBehaviour
                 yield return new WaitForSeconds(0.5f);
             }
         }
+
         if (waveNumber >=10)
         {
             for (int i = 0; i < waveNumber/2; i++)
@@ -76,6 +78,12 @@ public class WaveSpawner : MonoBehaviour
                 yield return new WaitForSeconds(1f);
             }
         }
+    }
+
+    public void SkipWave()
+    {
+        timer = 0f;
+        Debug.Log("Wave skiped");
     }
 
     void EnemySpawnDefault()
