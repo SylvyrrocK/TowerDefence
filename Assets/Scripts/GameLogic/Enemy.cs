@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int damageToCore = 1;
     [SerializeField] private int bounty = 10;
     [SerializeField] private int scoreValue = 10;
+
     public float startHealth = 50;
     private float health;
 
@@ -50,8 +51,9 @@ public class Enemy : MonoBehaviour
     void Death()
     {
         GameObject effect = (GameObject)Instantiate(deathAnimation, transform.position, transform.rotation);
-        Destroy(effect, 2f);
         Destroy(gameObject);
+        Destroy(effect, 2f);
+  
         PlayerStats.score += scoreValue;
         PlayerStats.money += bounty;
     }
