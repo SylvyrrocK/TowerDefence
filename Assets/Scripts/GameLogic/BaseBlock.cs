@@ -19,7 +19,7 @@ public class BaseBlock : MonoBehaviour
     void OnMouseEnter()
     {
         // Prevent block hover animation when mouse is over UI element
-        if (EventSystem.current.IsPointerOverGameObject())
+        if (IsMouseOverUI())
         {
             return;
         }
@@ -62,8 +62,19 @@ public class BaseBlock : MonoBehaviour
             return;
         }
 
+        if (IsMouseOverUI())
+        {
+            Debug.Log("Clicked on the UI");
+            return;
+        }
+
         // Call method from Tower Building class for selected node
         towerBuilding.TowerBuild(this);
         blockRend.material.color = new Color(1, 1, 1, 1); // White
+    }
+
+    private bool IsMouseOverUI()
+    {
+        return EventSystem.current.IsPointerOverGameObject();
     }
 }

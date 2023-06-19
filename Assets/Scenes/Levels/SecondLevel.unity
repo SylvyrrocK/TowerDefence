@@ -516,6 +516,7 @@ GameObject:
   - component: {fileID: 52100347}
   - component: {fileID: 52100346}
   - component: {fileID: 52100345}
+  - component: {fileID: 52100349}
   m_Layer: 5
   m_Name: OverlayCanvas
   m_TagString: Untagged
@@ -607,6 +608,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &52100349
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52100344}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5c602f4c3bc1cef439c7584d6988b875, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &58114542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14866,7 +14888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7630788002065986832, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -947.1991
+      value: -1112.9734
       objectReference: {fileID: 0}
     - target: {fileID: 7630788002065986832, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -14874,7 +14896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7630788002065986833, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_margin.x
-      value: 0.51438904
+      value: -1.4018251
       objectReference: {fileID: 0}
     - target: {fileID: 7630788002313138724, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_margin.x
@@ -14992,9 +15014,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7630788003623083785, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1051.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788003623083785, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1049.76
+      objectReference: {fileID: 0}
     - target: {fileID: 7630788003623083830, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_margin.z
-      value: -14.572023
+      value: 2.443757
       objectReference: {fileID: 0}
     - target: {fileID: 8288274421866913871, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_Color.b

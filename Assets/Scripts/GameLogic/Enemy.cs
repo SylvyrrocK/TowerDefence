@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
     {
         GameObject effect = (GameObject)Instantiate(deathAnimation, transform.position, transform.rotation);
         Destroy(gameObject);
-        Destroy(effect, 2f);
+        Destroy(effect, 0.5f);
   
         PlayerStats.score += scoreValue;
         PlayerStats.money += bounty;

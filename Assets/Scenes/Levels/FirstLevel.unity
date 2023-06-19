@@ -982,6 +982,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7151882314431838909, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151882314431838909, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1704081119}
@@ -1155,6 +1159,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7630788003048421865, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689384019444094801, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: m_Navigation.m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8689384019444094801, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
@@ -1452,7 +1460,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  padding: 10
   zoomFactor: 50
   zoomLerpSpeed: 10
   leftLimit: -50
