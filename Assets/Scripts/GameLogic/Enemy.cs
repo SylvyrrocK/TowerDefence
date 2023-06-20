@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int damageToCore = 1;
     [SerializeField] private int bounty = 10;
     [SerializeField] private int scoreValue = 10;
+    [SerializeField] private float rotationSpeed = 5f;
 
     public float startHealth = 50;
     private float health;
@@ -32,7 +33,14 @@ public class Enemy : MonoBehaviour
         Vector2 dirrection = target.position - transform.position;
         transform.Translate(dirrection.normalized * speed * Time.deltaTime, Space.World);
 
-        if (Vector2.Distance(transform.position, target.position) <=0.5f )
+        //Enemy sprite rotation according to dirrectional vector
+        if (dirrection != Vector2.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, dirrection);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        }
+
+        if (Vector2.Distance(transform.position, target.position) <=0.2f )
         {
             GetNextWaypoint();
         }

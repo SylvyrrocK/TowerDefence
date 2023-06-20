@@ -32,6 +32,7 @@ public class BaseBlock : MonoBehaviour
 
         if (towerBuilding.EnoughMoney && isTurret == null)
         {
+            //TODO: Add transparent tower preview
             // Set green colour
             blockRend.material.color = new Color(0, 1, 0, 1);
         }
