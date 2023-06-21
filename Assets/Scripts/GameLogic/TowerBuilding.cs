@@ -6,6 +6,9 @@ public class TowerBuilding : MonoBehaviour
 {
     public static TowerBuilding instance;
     private TowerStats selectedTower;
+    private BaseBlock selectedNode;
+
+    public TowerMenu towerMenu;
 
     [Header ("Tower Prefabs:")]
     public GameObject defaultTowerPrefab;
@@ -33,6 +36,27 @@ public class TowerBuilding : MonoBehaviour
     public void PickTowerToPlace(TowerStats tower)
     {
         selectedTower = tower;
+        DeselectNode();
+    }
+
+    public void SelectNode(BaseBlock baseBlock)
+    {
+        if (selectedNode == baseBlock)
+        {
+            DeselectNode();
+            return;
+        }
+
+        selectedNode = baseBlock;
+        selectedTower = null;
+
+        towerMenu.SetTarget(baseBlock);
+    }
+
+    public void DeselectNode()
+    {
+        selectedNode = null;
+        towerMenu.Hide();
     }
 
     public void TowerBuild(BaseBlock baseBlock)
@@ -49,6 +73,7 @@ public class TowerBuilding : MonoBehaviour
         Destroy(construction, 4f);
         baseBlock.isTurret = tower;
         PlayerStats.money -= selectedTower.towerPrice;
+        selectedTower = null;
         Debug.Log("Tower bought: " + PlayerStats.money);
     }
 }

@@ -52,20 +52,19 @@ public class BaseBlock : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!towerBuilding.AbleToBuild)
+        if (IsMouseOverUI())
         {
+            Debug.Log("Clicked on the UI");
             return;
         }
 
         if (isTurret != null)
         {
-            Debug.Log("Cell already taken!"); // TODO: Popup with text ingame 
-            return;
+            towerBuilding.SelectNode(this);
         }
 
-        if (IsMouseOverUI())
+        if (!towerBuilding.AbleToBuild)
         {
-            Debug.Log("Clicked on the UI");
             return;
         }
 
