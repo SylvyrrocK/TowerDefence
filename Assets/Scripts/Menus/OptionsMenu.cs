@@ -13,6 +13,8 @@ public class OptionsMenu : MonoBehaviour
     public TMPro.TMP_Dropdown resolutionDropdown;
     Resolution[] resolutions;
 
+    //FPSUpdate fpsUpdate;
+
     private void Start()
     {
         resolutions = Screen.resolutions;
@@ -48,6 +50,12 @@ public class OptionsMenu : MonoBehaviour
     {
         Screen.fullScreen = isFullscreen;
         Debug.Log("full sceen");
+    }
+
+    public void SetFPSCounter(bool fpsCounter)
+    {
+        //fpsUpdate.isDisplayed = fpsCounter;
+        Debug.Log("fps counter ");
     }
 
     public void SetMasterVolume (float volume)

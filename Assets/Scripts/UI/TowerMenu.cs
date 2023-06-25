@@ -19,4 +19,14 @@ public class TowerMenu : MonoBehaviour
     {
         UI.SetActive(false);
     }
+
+    public void SellTower(BaseBlock tower)
+    {
+
+    }
+
+    public void UpgradeTower()
+    {
+
+    }
 }
