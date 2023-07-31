@@ -1069,6 +1069,54 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: mortarTower.sellPrice
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: defaultTower.sellPrice
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: minigunTower.sellPrice
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: mortarTower.upgradePrice
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: slowFieldTower.sellPrice
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: defaultTower.upgradePrice
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: minigunTower.upgradePrice
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: mortarTower.upgradedPrefab
+      value: 
+      objectReference: {fileID: 3348059401887315627, guid: 0168bdfa283327a469882f05147ed241, type: 3}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: defaultTower.upgradedPrefab
+      value: 
+      objectReference: {fileID: 3348059401887315627, guid: f15fe89d0c14cb341ba3cf7d4948ff3d, type: 3}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: minigunTower.upgradedPrefab
+      value: 
+      objectReference: {fileID: 3348059401887315627, guid: f7e37fdea702472448f496d4b9491e3b, type: 3}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: slowFieldTower.upgradePrice
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: slowFieldTower.upgradedPrefab
+      value: 
+      objectReference: {fileID: 3348059401887315627, guid: 18995cc884280b04ba5310e652ad4e67, type: 3}
     - target: {fileID: 7630788002540849462, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1.999939
@@ -2076,6 +2124,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
   m_PrefabInstance: {fileID: 1400030058170782638}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &745905756 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6703846568039209671, guid: 89788237735466b4ca02e01d86437182, type: 3}
+  m_PrefabInstance: {fileID: 6703846567937749780}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &759172986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
@@ -3778,6 +3837,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
   m_PrefabInstance: {fileID: 8159104575600618363}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1797411884 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6703846567051275317, guid: 89788237735466b4ca02e01d86437182, type: 3}
+  m_PrefabInstance: {fileID: 6703846567937749780}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1800722509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
@@ -4385,6 +4455,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
   m_PrefabInstance: {fileID: 2788943516549035467}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2118381872 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6703846566929552394, guid: 89788237735466b4ca02e01d86437182, type: 3}
+  m_PrefabInstance: {fileID: 6703846567937749780}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2119933844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
@@ -13350,9 +13431,121 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6703846566404669489, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: sellPrice
+      value: 
+      objectReference: {fileID: 1797411884}
+    - target: {fileID: 6703846566404669489, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: upgradePrice
+      value: 
+      objectReference: {fileID: 2118381872}
+    - target: {fileID: 6703846566404669489, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: upgradeButton
+      value: 
+      objectReference: {fileID: 745905756}
     - target: {fileID: 6703846566404669495, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_Name
       value: TowerMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846566404669495, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846566588383768, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055274, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055274, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055274, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055274, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055274, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055274, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1575187237}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SellTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TowerMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: BaseBlock, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846568039209670, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846568039209670, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846568039209670, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846568039209670, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846568039209670, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846568039209670, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846568039209671, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1575187237}
+    - target: {fileID: 6703846568039209671, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Upgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846568039209671, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TowerMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846568039209671, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89788237735466b4ca02e01d86437182, type: 3}

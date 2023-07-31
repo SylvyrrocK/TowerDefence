@@ -6,6 +6,12 @@ using UnityEngine;
 public class BaseBlock : MonoBehaviour
 {
     public  GameObject isTurret;
+
+    public TowerStats towerStats;
+
+    public bool isUpgraded = false;
+
+
     private Renderer blockRend;
 
     TowerBuilding towerBuilding;
@@ -69,8 +75,65 @@ public class BaseBlock : MonoBehaviour
         }
 
         // Call method from Tower Building class for selected node
-        towerBuilding.TowerBuild(this);
+        BuildTurret(towerBuilding.GetTurretToBuild());
+
+        //towerBuilding.TowerBuild(this);
         blockRend.material.color = new Color(1, 1, 1, 1); // White
+    }
+
+    void BuildTurret (TowerStats blueprint)
+    {
+        if (PlayerStats.money < blueprint.towerPrice)
+        {
+            Debug.Log("Your money: " + PlayerStats.money + " Tower price: " + blueprint.towerPrice);
+            return;
+        }
+
+        PlayerStats.money -= blueprint.towerPrice;
+
+        GameObject _tower = (GameObject)Instantiate(blueprint.prefab, transform.position, transform.rotation);
+        isTurret = _tower;
+
+        towerStats = blueprint;
+
+        GameObject construction = (GameObject)Instantiate(towerBuilding.constructionEffect, transform.position, transform.rotation);
+        Destroy(construction, 4f);
+       
+        towerBuilding.DeselectTower();
+
+        Debug.Log("Tower bought: " + PlayerStats.money);
+    }
+
+    public void UpgradeTurret()
+    {
+        if (isUpgraded)
+        {
+            return;
+        }
+
+        if (PlayerStats.money < towerStats.upgradePrice)
+        {
+            Debug.Log("Your money: " + PlayerStats.money + " Upgrade price: " + towerStats.upgradePrice);
+            return;
+        }
+
+        PlayerStats.money -= towerStats.upgradePrice;
+
+        //Remove old turret
+        Destroy(isTurret);
+
+        //Build upgraded turret
+        GameObject _tower = (GameObject)Instantiate(towerStats.upgradedPrefab, transform.position, transform.rotation);
+        isTurret = _tower;
+
+        GameObject construction = (GameObject)Instantiate(towerBuilding.constructionEffect, transform.position, transform.rotation);
+        Destroy(construction, 4f);
+
+        isUpgraded = true;
+        towerBuilding.DeselectTower();
+
+
+        Debug.Log("Tower upgraded: " + PlayerStats.money);
     }
 
     private bool IsMouseOverUI()

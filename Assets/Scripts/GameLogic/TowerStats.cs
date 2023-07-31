@@ -7,4 +7,9 @@ public class TowerStats
 {
     public GameObject prefab;
     public int towerPrice;
+
+    public GameObject upgradedPrefab;
+    public int upgradePrice;
+
+    public int sellPrice;
 }
