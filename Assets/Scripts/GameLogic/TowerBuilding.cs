@@ -16,6 +16,7 @@ public class TowerBuilding : MonoBehaviour
     public GameObject mortarTowerPrefab;
     public GameObject slowFieldPrefab;
     public GameObject constructionEffect;
+    public GameObject sellEffect;
 
     // When script is called we store this tower manager script so we can access it at any point
     private void Awake()
@@ -68,22 +69,4 @@ public class TowerBuilding : MonoBehaviour
     {
         selectedTower = null;
     }
-
-    //public void TowerBuild(BaseBlock baseBlock)
-    //{
-    //    if (PlayerStats.money < selectedTower.towerPrice)
-    //    {
-    //        Debug.Log("Your money: " + PlayerStats.money + " Tower price: " + selectedTower.towerPrice);
-    //        return;
-    //    }
-
-    //    // TODO: create completion check
-    //    GameObject tower = (GameObject)Instantiate(selectedTower.prefab, baseBlock.transform.position, baseBlock.transform.rotation);
-    //    GameObject construction = (GameObject)Instantiate(constructionEffect, baseBlock.transform.position, baseBlock.transform.rotation);
-    //    Destroy(construction, 4f);
-    //    baseBlock.isTurret = tower;
-    //    PlayerStats.money -= selectedTower.towerPrice;
-    //    selectedTower = null;
-    //    Debug.Log("Tower bought: " + PlayerStats.money);
-    //}
 }

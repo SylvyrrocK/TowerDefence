@@ -22,10 +22,8 @@ public class GameContoller : MonoBehaviour
     {
         gameOver = false;
         gameIsPaused = false;
-      
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (gameOver)
@@ -95,7 +93,6 @@ public class GameContoller : MonoBehaviour
             gameSpeed.text = ">>";
             Debug.Log("1");
         }
-  
     }
 
     void EndGame ()
@@ -103,6 +100,6 @@ public class GameContoller : MonoBehaviour
         gameOver = true;
         gameOverHUD.SetActive(true);
         inGameHUD.SetActive(false);
-        //Debug.Log("GG");
+        //Debug.Log("Game over");
     }
 }

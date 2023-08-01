@@ -3417,6 +3417,7 @@ MonoBehaviour:
   mortarTowerPrefab: {fileID: 3348059401887315627, guid: 0168bdfa283327a469882f05147ed241, type: 3}
   slowFieldPrefab: {fileID: 3348059401887315627, guid: 18995cc884280b04ba5310e652ad4e67, type: 3}
   constructionEffect: {fileID: 2559191160085015829, guid: 76332dfc1bd6aba40a3c60a64b85cd96, type: 3}
+  sellEffect: {fileID: 2559191160085015829, guid: 9a8d90381ba719e4dab5c6e199d5541d, type: 3}
 --- !u!4 &1720944526 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
@@ -13455,6 +13456,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6703846566929552392, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_Name
+      value: Upgrade (TMP)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567051275275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_Name
+      value: Sell (TMP)
+      objectReference: {fileID: 0}
     - target: {fileID: 6703846567054055274, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -13485,7 +13494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -13497,7 +13506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SellTower
+      value: Sell
       objectReference: {fileID: 0}
     - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -13505,7 +13514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: BaseBlock, Assembly-CSharp
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6703846568039209670, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_AnchorMax.y

@@ -136,6 +136,26 @@ public class BaseBlock : MonoBehaviour
         Debug.Log("Tower upgraded: " + PlayerStats.money);
     }
 
+    public void SellTower()
+    {
+        if (isTurret == isUpgraded)
+        {
+            PlayerStats.money += (towerStats.towerPrice + towerStats.upgradePrice) / 2;
+            Debug.Log("1");
+        }
+        else
+        {
+            PlayerStats.money += towerStats.sellPrice;
+            Debug.Log("2");
+        }
+
+        GameObject construction = (GameObject)Instantiate(towerBuilding.sellEffect, transform.position, transform.rotation);
+        Destroy(construction, 4f);
+
+        Destroy(isTurret);
+        Debug.Log("Tower sold");
+    }
+
     private bool IsMouseOverUI()
     {
         return EventSystem.current.IsPointerOverGameObject();

@@ -15,6 +15,7 @@ public class TowerMenu : MonoBehaviour
     public TextMeshProUGUI sellPrice;
 
     public Button upgradeButton;
+
     public void SetTarget(BaseBlock _target)
     {
         target = _target;
@@ -23,8 +24,9 @@ public class TowerMenu : MonoBehaviour
         {
             upgradePrice.text = "Upgrade " + "$" + target.towerStats.upgradePrice;
 
-            sellPrice.text = "Sell " + "$" + target.towerStats.sellPrice;
             upgradeButton.interactable = true;
+
+            sellPrice.text = "Sell " + "$" + target.towerStats.towerPrice / 2;
         }
         else
         {
@@ -32,7 +34,7 @@ public class TowerMenu : MonoBehaviour
 
             upgradePrice.text = "Max Level";
 
-            sellPrice.text = "Sell " + "$" + target.towerStats.sellPrice;
+            sellPrice.text = "Sell " + "$" + (target.towerStats.towerPrice + target.towerStats.upgradePrice) / 2;
         }
 
         transform.position = target.transform.position;
@@ -44,13 +46,12 @@ public class TowerMenu : MonoBehaviour
         UI.SetActive(false);
     }
 
-    //TODO:
-    //public void SellTower(BaseBlock tower)
-    //{
-    //    PlayerStats.money += target.towerStats.sellPrice;
-    //    Destroy(tower);
-    //    Debug.Log("Sold");
-    //}
+    public void Sell()
+    {
+        target.SellTower();
+        target.isUpgraded = false;
+        TowerBuilding.instance.DeselectNode();
+    }
 
     public void Upgrade()
     {
