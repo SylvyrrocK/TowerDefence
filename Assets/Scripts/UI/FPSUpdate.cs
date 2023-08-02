@@ -8,11 +8,10 @@ using TMPro;
 
 public class FPSUpdate : MonoBehaviour
 {
-    OptionsMenu optionsMenu;
     float fps;
     float updateTimer = 0.2f;
     [SerializeField] private TextMeshProUGUI fpsText;
-    [SerializeField] public bool isDisplayed = true;
+    [SerializeField] public static bool isDisplayed = true;
 
     // Update is called once per frame
     private void UpdateFPSDisplay()
@@ -29,7 +28,7 @@ public class FPSUpdate : MonoBehaviour
     public void ToggleFPSDisplay() 
     {
         if(isDisplayed)
-        {
+        { 
             fpsText.enabled = false;
             isDisplayed = false;
         }
@@ -47,6 +46,13 @@ public class FPSUpdate : MonoBehaviour
 
     void Start()
     {
-        fpsText.enabled = isDisplayed; 
+        if (isDisplayed)
+        {
+            fpsText.enabled = true;
+        }
+        else
+        {
+            fpsText.enabled = false;
+        }
     }
 }

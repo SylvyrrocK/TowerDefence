@@ -11363,6 +11363,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Score:0
       objectReference: {fileID: 0}
+    - target: {fileID: 7630788002313138727, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002313138727, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7630788002466062345, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -11862,6 +11870,7 @@ MonoBehaviour:
   mortarTowerPrefab: {fileID: 3348059401887315627, guid: 0168bdfa283327a469882f05147ed241, type: 3}
   slowFieldPrefab: {fileID: 3348059401887315627, guid: 18995cc884280b04ba5310e652ad4e67, type: 3}
   constructionEffect: {fileID: 2559191160085015829, guid: 76332dfc1bd6aba40a3c60a64b85cd96, type: 3}
+  sellEffect: {fileID: 0}
 --- !u!4 &1720179574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}

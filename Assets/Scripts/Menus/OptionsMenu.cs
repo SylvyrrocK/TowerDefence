@@ -54,8 +54,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void SetFPSCounter(bool fpsCounter)
     {
-        //fpsUpdate.isDisplayed = fpsCounter;
-        Debug.Log("fps counter ");
+        Debug.Log("fps counter " +  fpsCounter);
     }
 
     public void SetMasterVolume (float volume)
