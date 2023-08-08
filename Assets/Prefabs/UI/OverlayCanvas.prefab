@@ -446,6 +446,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.000061035156
       objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: mortarTower.upgradePrice
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: defaultTower.upgradePrice
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: minigunTower.upgradePrice
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: mortarTower.upgradedPrefab
+      value: 
+      objectReference: {fileID: 3348059401887315627, guid: 0b5f20f777c2aae47b82da34610349c3, type: 3}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: defaultTower.upgradedPrefab
+      value: 
+      objectReference: {fileID: 3348059401887315627, guid: 25c43ec080302254887e030aeee912fa, type: 3}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: minigunTower.upgradedPrefab
+      value: 
+      objectReference: {fileID: 3348059401887315627, guid: 760b87c833f6c36448921c4f5e1bfb4f, type: 3}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: slowFieldTower.upgradePrice
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: slowFieldTower.upgradedPrefab
+      value: 
+      objectReference: {fileID: 3348059401887315627, guid: de0c8e015d77dc64cbd6b9ff8ccd0661, type: 3}
     - target: {fileID: 7630788002540849462, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 2.000061

@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 6703846566588383768}
+  upgradePrice: {fileID: 6703846566929552394}
+  sellPrice: {fileID: 6703846567051275317}
+  upgradeButton: {fileID: 6703846568039209671}
 --- !u!1 &6703846566588383768
 GameObject:
   m_ObjectHideFlags: 0

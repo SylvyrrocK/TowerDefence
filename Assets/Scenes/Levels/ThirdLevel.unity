@@ -2694,6 +2694,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
   m_PrefabInstance: {fileID: 1341974613}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &317775676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6703846568039209671, guid: 89788237735466b4ca02e01d86437182, type: 3}
+  m_PrefabInstance: {fileID: 1886287092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &319229615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
@@ -7579,6 +7590,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
   m_PrefabInstance: {fileID: 1193086372}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1127908681 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6703846566929552394, guid: 89788237735466b4ca02e01d86437182, type: 3}
+  m_PrefabInstance: {fileID: 1886287092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1128135307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10655,6 +10677,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
+--- !u!114 &1543483887 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6703846567051275317, guid: 89788237735466b4ca02e01d86437182, type: 3}
+  m_PrefabInstance: {fileID: 1886287092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1547669406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
@@ -11486,6 +11519,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: mortarTower.upgradePrice
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: defaultTower.upgradePrice
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: minigunTower.upgradePrice
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: mortarTower.upgradedPrefab
+      value: 
+      objectReference: {fileID: 3348059401887315627, guid: 0b5f20f777c2aae47b82da34610349c3, type: 3}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: defaultTower.upgradedPrefab
+      value: 
+      objectReference: {fileID: 3348059401887315627, guid: 25c43ec080302254887e030aeee912fa, type: 3}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: minigunTower.upgradedPrefab
+      value: 
+      objectReference: {fileID: 3348059401887315627, guid: 760b87c833f6c36448921c4f5e1bfb4f, type: 3}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: slowFieldTower.upgradePrice
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
+      propertyPath: slowFieldTower.upgradedPrefab
+      value: 
+      objectReference: {fileID: 3348059401887315627, guid: de0c8e015d77dc64cbd6b9ff8ccd0661, type: 3}
     - target: {fileID: 7630788002540849462, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -11981,7 +12046,7 @@ MonoBehaviour:
   mortarTowerPrefab: {fileID: 3348059401887315627, guid: 0168bdfa283327a469882f05147ed241, type: 3}
   slowFieldPrefab: {fileID: 3348059401887315627, guid: 18995cc884280b04ba5310e652ad4e67, type: 3}
   constructionEffect: {fileID: 2559191160085015829, guid: 76332dfc1bd6aba40a3c60a64b85cd96, type: 3}
-  sellEffect: {fileID: 0}
+  sellEffect: {fileID: 2559191160085015829, guid: 9a8d90381ba719e4dab5c6e199d5541d, type: 3}
 --- !u!4 &1720179574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3657321570912279478, guid: 618ea9fe665b7284abf07769a05788b2, type: 3}
@@ -13234,6 +13299,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6703846566404669489, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: sellPrice
+      value: 
+      objectReference: {fileID: 1543483887}
+    - target: {fileID: 6703846566404669489, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: upgradePrice
+      value: 
+      objectReference: {fileID: 1127908681}
+    - target: {fileID: 6703846566404669489, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: upgradeButton
+      value: 
+      objectReference: {fileID: 317775676}
     - target: {fileID: 6703846566404669495, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_Name
       value: TowerMenu
@@ -13245,6 +13322,10 @@ PrefabInstance:
     - target: {fileID: 6703846566588383768, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846566929552392, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_Name
+      value: Upgrade (TMP)
       objectReference: {fileID: 0}
     - target: {fileID: 6703846566929552392, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_Layer
@@ -13265,6 +13346,10 @@ PrefabInstance:
     - target: {fileID: 6703846567020799231, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567051275275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_Name
+      value: Sell (TMP)
       objectReference: {fileID: 0}
     - target: {fileID: 6703846567051275275, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_Layer
@@ -13298,6 +13383,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1886287093}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Sell
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TowerMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846567054055275, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6703846568039209669, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -13328,7 +13441,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6703846568039209671, guid: 89788237735466b4ca02e01d86437182, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846568039209671, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1886287093}
+    - target: {fileID: 6703846568039209671, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Upgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846568039209671, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TowerMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703846568039209671, guid: 89788237735466b4ca02e01d86437182, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89788237735466b4ca02e01d86437182, type: 3}
