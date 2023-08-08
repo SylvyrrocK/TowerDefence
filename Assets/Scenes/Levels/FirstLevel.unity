@@ -335,6 +335,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2105180506}
   - {fileID: 668544601}
   - {fileID: 1795400842}
   m_Father: {fileID: 1315825384}
@@ -1104,15 +1105,15 @@ PrefabInstance:
     - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: mortarTower.upgradedPrefab
       value: 
-      objectReference: {fileID: 3348059401887315627, guid: 0168bdfa283327a469882f05147ed241, type: 3}
+      objectReference: {fileID: 3348059401887315627, guid: 0b5f20f777c2aae47b82da34610349c3, type: 3}
     - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: defaultTower.upgradedPrefab
       value: 
-      objectReference: {fileID: 3348059401887315627, guid: f15fe89d0c14cb341ba3cf7d4948ff3d, type: 3}
+      objectReference: {fileID: 3348059401887315627, guid: 25c43ec080302254887e030aeee912fa, type: 3}
     - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: minigunTower.upgradedPrefab
       value: 
-      objectReference: {fileID: 3348059401887315627, guid: f7e37fdea702472448f496d4b9491e3b, type: 3}
+      objectReference: {fileID: 3348059401887315627, guid: 760b87c833f6c36448921c4f5e1bfb4f, type: 3}
     - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: slowFieldTower.upgradePrice
       value: 250
@@ -1120,7 +1121,7 @@ PrefabInstance:
     - target: {fileID: 7630788002540849458, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: slowFieldTower.upgradedPrefab
       value: 
-      objectReference: {fileID: 3348059401887315627, guid: 18995cc884280b04ba5310e652ad4e67, type: 3}
+      objectReference: {fileID: 3348059401887315627, guid: de0c8e015d77dc64cbd6b9ff8ccd0661, type: 3}
     - target: {fileID: 7630788002540849462, guid: cf169fe2bef8d3d4bbba3f783c35b313, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1.999939
@@ -1681,7 +1682,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1315825384}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &581919734
 Animator:
@@ -1847,7 +1848,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 74271785}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &689049760 stripped
 Transform:
@@ -2024,7 +2025,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1315825384}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &719654077
 Animator:
@@ -2797,7 +2798,6 @@ Transform:
   - {fileID: 209537662}
   - {fileID: 2140099057}
   - {fileID: 74271785}
-  - {fileID: 2105180506}
   - {fileID: 719654076}
   - {fileID: 581919733}
   m_Father: {fileID: 0}
@@ -3783,7 +3783,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 74271785}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1795400843
 SpriteRenderer:
@@ -4403,12 +4403,12 @@ SpriteRenderer:
   m_SortingLayerID: -659513615
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.59131366, g: 0.8301887, b: 0.79980946, a: 1}
+  m_Sprite: {fileID: 2037847053, guid: 076ca93437f4ddd48800439182685dfa, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4422,12 +4422,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105180504}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.5, y: 37.5, z: 0}
-  m_LocalScale: {x: 80, y: 80, z: 1}
+  m_LocalPosition: {x: 0, y: -19, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1315825384}
-  m_RootOrder: 3
+  m_Father: {fileID: 74271785}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2105180507
 BoxCollider2D:
@@ -4446,8 +4446,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 1.96875, y: 1.9725953}
+    newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

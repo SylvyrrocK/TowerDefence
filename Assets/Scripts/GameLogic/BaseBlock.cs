@@ -11,7 +11,6 @@ public class BaseBlock : MonoBehaviour
 
     public bool isUpgraded = false;
 
-
     private Renderer blockRend;
 
     TowerBuilding towerBuilding;
@@ -86,6 +85,7 @@ public class BaseBlock : MonoBehaviour
         if (PlayerStats.money < blueprint.towerPrice)
         {
             Debug.Log("Your money: " + PlayerStats.money + " Tower price: " + blueprint.towerPrice);
+            towerBuilding.DeselectTower();
             return;
         }
 
@@ -141,12 +141,12 @@ public class BaseBlock : MonoBehaviour
         if (isTurret == isUpgraded)
         {
             PlayerStats.money += (towerStats.towerPrice + towerStats.upgradePrice) / 2;
-            Debug.Log("1");
+            //Debug.Log("Upgraded tower sold");
         }
         else
         {
             PlayerStats.money += towerStats.sellPrice;
-            Debug.Log("2");
+            //Debug.Log("Tower sold");
         }
 
         GameObject construction = (GameObject)Instantiate(towerBuilding.sellEffect, transform.position, transform.rotation);
