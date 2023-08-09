@@ -11,6 +11,8 @@ public class GameOver : MonoBehaviour
     public TextMeshProUGUI wavesText;
     public TextMeshProUGUI scoreText;
 
+    public SceneFader sceneFader;
+
     private void OnEnable()
     {
         wavesText.text = PlayerStats.waves.ToString();
@@ -19,6 +21,7 @@ public class GameOver : MonoBehaviour
 
     public void Restart()
     {
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
         // Loads currently active scene again by calling its index
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -26,6 +29,7 @@ public class GameOver : MonoBehaviour
     public void Exit()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("MainMenu");
+        sceneFader.FadeTo("MainMenu");
+        //SceneManager.LoadScene("MainMenu");
     }
 }

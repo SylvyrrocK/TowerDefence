@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    public SceneFader sceneFader;
+
     public void Play()
     {
-        SceneManager.LoadScene("LevelSelect");
+        sceneFader.FadeTo("LevelSelect");
+        //SceneManager.LoadScene("LevelSelect");
     }
 
     public void OpenSteamProfile()
@@ -17,12 +20,14 @@ public class MainMenu : MonoBehaviour
 
     public void Options()
     {
-        SceneManager.LoadScene("OptionsMenu");
+        sceneFader.FadeTo("OptionsMenu");
+        //SceneManager.LoadScene("OptionsMenu");
     }
 
     public void Achievemnets()
     {
-        SceneManager.LoadScene("Achievements");
+        sceneFader.FadeTo("Achievements");
+        //SceneManager.LoadScene("Achievements");
     }
 
     public void Exit()

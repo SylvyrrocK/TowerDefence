@@ -8,13 +8,17 @@ public class SelectMaster : MonoBehaviour
 {
     public string selectedLevel;
 
+    public SceneFader sceneFader;
+
     public void LevelSelect(string selectedLevel)
     {
-        SceneManager.LoadScene(selectedLevel);
+        sceneFader.FadeTo(selectedLevel);
+        //SceneManager.LoadScene(selectedLevel);
     }
 
     public void Menu()
     {
-        SceneManager.LoadScene("MainMenu");
+        sceneFader.FadeTo("MainMenu");
+        //SceneManager.LoadScene("MainMenu");
     }
 }

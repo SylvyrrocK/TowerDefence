@@ -13,7 +13,7 @@ public class OptionsMenu : MonoBehaviour
     public TMPro.TMP_Dropdown resolutionDropdown;
     Resolution[] resolutions;
 
-    //FPSUpdate fpsUpdate;
+    public SceneFader sceneFader;
 
     private void Start()
     {
@@ -77,6 +77,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void Menu()
     {
-        SceneManager.LoadScene("MainMenu");
+        sceneFader.FadeTo("MainMenu");
+        //SceneManager.LoadScene("MainMenu");
     }
 }
